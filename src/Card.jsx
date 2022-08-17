@@ -6,23 +6,23 @@ function Card({ item, handleAddtoCart, disablekey}) {
 
     return <div className="col-lg-4 mb-3">
         <div className="card" style={{ width: "18rem" }}>
-            <img src={item.image} className="card-img-top" alt="random_pics" height={195} />
-            <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
-                <span className="card-text">Rs.{item.price}</span>
-                <span className="card-text" >
+            <img src={item.image} className="card-img-top" alt="random_pics" height={180} />
+            <div className="card-body text-center">
+                <h4 className="card-title ">{item.title}</h4>
+                <span className="card-text "><b>Rs.{item.price}</b></span>
+                <p className="card-text col-6 mx-auto mb-2"> 
                     <ReactStars
-                    size={20}
+                    size={30}
                     value={item.ratings}
                     isHalf={true}
                     edit={false}
-                    activeColor="#ffd700"
-                /></span>
+                    activeColor="yellow"
+                /></p>
 
                 <button disabled={disablekey.some((obj) => {
                     return obj.id === item.id
                 })}
-                 onClick={() => { handleAddtoCart(item) }} className="btn btn-primary">Add to Cart</button>
+                 onClick={() => { handleAddtoCart(item) }} className="btn btn-primary text-center">Add to Cart</button>
             </div>
         </div>
     </div>

@@ -12,6 +12,7 @@ function App() {
       price: 50000,
       image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSujEeo1rm5xD0SU_Xo-0VP--TqffmcTVReGdQ_MC8m93oy_MNJ4cL7b-zxwQfx606cQeD-vHI-GEoM19iDs5vV7QZyjUOV",
       ratings: 5,
+      
     },
     {
       id: 2,
@@ -69,7 +70,7 @@ function App() {
 
   return <div className="container">
     <div className="row">
-      <div className="col-lg-9 mt-3">
+      <div className="col-lg-9 mt-2">
         <div className='row'>
           {
             products.map((item) => {
