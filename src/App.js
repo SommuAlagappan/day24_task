@@ -73,7 +73,7 @@ function App() {
         <div className='row'>
           {
             products.map((item) => {
-              return <Card item={item} handleAddtoCart={addToCart}></Card>
+              return <Card item={item} disablekey={cart} handleAddtoCart={addToCart}></Card>
             })
           }
 
