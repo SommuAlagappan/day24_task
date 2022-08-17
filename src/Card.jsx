@@ -1,8 +1,8 @@
-
 import ReactStars from "react-rating-stars-component";
 import React from "react";
 
-function Card({ item, handleAddtoCart }) {
+
+function Card({ item, handleAddtoCart, disablekey}) {
 
     return <div className="col-lg-4 mb-3">
         <div className="card" style={{ width: "18rem" }}>
@@ -19,7 +19,10 @@ function Card({ item, handleAddtoCart }) {
                     activeColor="#ffd700"
                 /></span>
 
-                <button onClick={() => { handleAddtoCart(item) }} className="btn btn-primary">Add to Cart</button>
+                <button disabled={disablekey.some((obj) => {
+                    return obj.id === item.id
+                })}
+                 onClick={() => { handleAddtoCart(item) }} className="btn btn-primary">Add to Cart</button>
             </div>
         </div>
     </div>
